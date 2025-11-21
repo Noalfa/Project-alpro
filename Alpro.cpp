@@ -18,7 +18,8 @@ int main(){
 		cout << " " << endl;
 		for (int l = 0; l< b;l++){
 			cout << "| " << matrik[k][l] <<" |";
-			
+
+			cout<<"Kontol"<<endl;
 		}
 	}
 }
