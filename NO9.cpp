@@ -119,7 +119,7 @@ void segitga () {
   cout<<"Masukkan nilai tinggi segitiga: "; cin>>tinggi;
   if (alas >0 && tinggi >0){
     float luas = 0.5*alas*tinggi;
-    cout<<"Luas Persegi Panjang = "<<luas<<endl;
+    cout<<"Luas Segitiga = "<<luas<<endl;
   }
   else {
     cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
