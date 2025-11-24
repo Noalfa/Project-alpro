@@ -1,1 +1,78 @@
+#include <iostream>
+using namespace std;
 
+
+const char* Notasi(int id){
+	if(id == 3 || id == 11 || id == 7){
+		return "Primer";
+	}else if(id == 1 || id == 9 || id == 5){
+		return "Sekunder";
+	}else {
+		return "Tersier";
+	}
+}
+
+const char* Sifat(int id){
+	if(id >= 1 && id <= 6){
+		return "Hangat";
+	}else {
+		return "Dingin";
+	}
+}
+
+void Perpaduan(int id){
+	switch (id) {
+        case 1:
+
+            break;
+
+        case 2:
+        
+            break;
+
+        case 3:
+
+            break;
+
+        case 4:
+            break;
+
+        case 5: 
+
+            break;
+    }
+}
+
+int main(){
+	int pilih, harmonis;
+	cout << "Program Menentukan Notasi, Sifat Warna, dan Perpaduan Warna Harmonis"<<endl;
+	cout << "Warna-Warna : "<<endl;
+	cout << "1. Orange           2. Red-Orange    3. Red" << endl;
+	cout << "4. Red-Violet       5. Violet        6. Blue-Violet" << endl;
+	cout << "7. Blue             8. Blue-Green    9. Green" << endl;
+	cout << "10. Yellow-Green   11. Yellow       12. Yellow Orange" << endl;
+	cout << endl;
+	cout << "Pilihan Warna : ";cin >> pilih;
+	if (pilih > 12 || pilih < 1) {
+        cout << "Input tidak valid. Keluar. (Harus 1 sampai 12)";
+        return 0;
+    }
+    
+    cout << "\nWarna terpilih: "<<endl;
+    cout << "Notasi Warna : " << Notasi(pilih)  << endl;
+    cout << "Sifat Warna  : " << Sifat(pilih) << endl;
+
+    cout << "Pilih jenis perpaduan harmonis (masukkan angka):"<<endl;
+    cout << "1. Perpaduan Warna Analogous "<<endl;
+    cout << "2. Perpaduan Warna Complementary"<<endl;
+    cout << "3. Perpaduan Warna Split-Complementary"<<endl;
+    cout << "4. Perpaduan Warna Triadic-Complementary"<<endl;
+    cout << "5. Perpaduan Warna Tetradic (Rectangle)"<<endl;
+    cout << "Pilihan : ";cin >> harmonis;
+    if (pilih > 5 || pilih < 1) {
+        cout << "Input tidak valid. Keluar. (Harus 1 sampai 5)";
+        return 0;
+    }
+    
+    Perpaduan(harmonis);
+}
