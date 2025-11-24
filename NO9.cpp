@@ -45,7 +45,7 @@ void datar () {
 }
 
 void persegi () {
-  float sisi;
+  float sisi = 0;
   cout<<"Masukkan nilai sisi: "; cin>>sisi;
   if (sisi >0){
     float luas = sisi*sisi;
@@ -57,8 +57,7 @@ void persegi () {
 }
 
 void persegipanjang () {
-  float panjang;
-  double lebar;
+  float panjang = 0, lebar = 0;
   cout<<"Masukkan nilai panjang: "; cin>>panjang;
   cout<<"Masukkan nilai lebar: "; cin>>lebar;
   if (panjang >0 && lebar >0){
@@ -71,8 +70,7 @@ void persegipanjang () {
 }
 
 void segitga () {
-  float alas;
-  double tinggi;
+  float alas = 0, tinggi = 0;
   cout<<"Masukkan nilai alas segitiga: "; cin>>alas;
   cout<<"Masukkan nilai tinggi segitiga: "; cin>>tinggi;
   if (alas >0 && tinggi >0){
@@ -85,7 +83,7 @@ void segitga () {
 }
 
 void lingkaran () {
-  double jari2;
+  double jari2 = 0;
   cout<<"Masukkan nilai jari-jari: "; cin>>jari2;
   if (jari2 >0){
     float luas = 3.14*(jari2^2)
@@ -97,8 +95,7 @@ void lingkaran () {
 }
 
 void jajar () {
-  float alas;
-  double tinggi;
+  float alas = 0, tinggi = 0;
   cout<<"Masukkan nilai alas jajar genjang: "; cin>>alas;
   cout<<"Masukkan nilai tinggi jajar genjang: "; cin>>tinggi;
   if (alas >0 && tinggi >0){
@@ -111,8 +108,7 @@ void jajar () {
 }
 
 void belah () {
-  float d1;
-  double d2;
+  float d1 = 0, d2 = 0;
   cout<<"Masukkan nilai diagonal 1: "; cin>>d1;
   cout<<"Masukkan nilai diagonal 2: "; cin>>d2;
   if (alas >0 && tinggi >0){
@@ -125,8 +121,7 @@ void belah () {
 }
 
 void layang2 () {
-  float d1;
-  double d2;
+  float d1 = 0, d2 = 0;
   cout<<"Masukkan nilai diagonal 1: "; cin>>d1;
   cout<<"Masukkan nilai diagonal 2: "; cin>>d2;
   if (alas >0 && tinggi >0){
@@ -139,10 +134,9 @@ void layang2 () {
 }
 
 void trapesium () {
-  float alas1, alas2;
-  double tinggi;
-  cout<<"Masukkan nilai alas 1 trapesium: "; cin>>alas1;
-  cout<<"Masukkan nilai alas 2 trapesium: "; cin>>alas2;
+  float a1 = 0, a2 = 0, tinggi = 0;
+  cout<<"Masukkan nilai sisi sejajar 1 trapesium: "; cin>>a1;
+  cout<<"Masukkan nilai sisi sejajar 2 trapesium: "; cin>>a2;
   cout<<"Masukkan nilai tinggi trapesium: "; cin>>tinggi;
   if (alas1 >0 && alas2 >0 && tinggi >0){
     float luas = 0.5*(alas1+alas2)*tinggi;
@@ -197,8 +191,8 @@ void ruang () {
 }
 
 void kubus () {
- float sisi;
- cout<<"Masukkan nilai sisi kubus: "; cin>>sisi;
+ float sisi = 0;
+  cout<<"Masukkan nilai sisi kubus: "; cin>>sisi;
   if (sisi >0){
     float volume = sisi^3;
     cout<<"Volume Kubus = "<<volume<<endl;
@@ -209,10 +203,9 @@ void kubus () {
 }
 
 void balok () {
- float panjang, lebar;
- double tinggi;
- cout<<"Masukkan nilai panjang kubus: "; cin>>panjang;
- cout<<"Masukkan nilai lebar kubus: "; cin>>lebar;
+ float panjang = 0, lebar = 0, tinggi = 0;
+  cout<<"Masukkan nilai panjang kubus: "; cin>>panjang;
+  cout<<"Masukkan nilai lebar kubus: "; cin>>lebar;
   cout<<"Masukkan nilai tinggi kubus: "; cin>>tinggi;
   if (panjang >0 && lebar >0 && tinggi >0){
     float volume = panjang*lebar*tinggi;
@@ -222,6 +215,125 @@ void balok () {
     cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
   }
 }
+
+void tabung () {
+ float jari2 = 0, tinggi = 0;
+  cout<<"Masukkan nilai jari-jari tabung: "; cin>>jari2;
+  cout<<"Masukkan nilai tinggi kubus: "; cin>>tinggi;
+  if (jari2 >0 && tinggi >0){
+    float volume = 3.14*(jari2^2)*tinggi;
+    cout<<"Volume Tabung = "<<volume<<endl;
+  }
+  else {
+    cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+  }
+}
+
+void bola () {
+ float jari2 = 0;
+  cout<<"Masukkan nilai jari-jari bola: "; cin>>jari2;
+  if (jari2 >0){
+    float volume = 4/3*3.14*(jari2^3);
+    cout<<"Volume Bola = "<<volume<<endl;
+  }
+  else {
+    cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+  }
+}
+
+void kerucut ;() {
+  float jari2 = 0, tinggi = 0;
+  cout<<"Masukkan nilai jari-jari kerucut: "; cin>>jari2;
+  cout<<"Masukkan nilai tinggi kerucut: "; cin>>tinggi;
+  if (jari2 >0 && tinggi >0){
+    float volume = (3.14*(jari2^2)*tinggi)/3;
+    cout<<"Volume Kerucut = "<<volume<<endl;
+  }
+  else {
+    cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+  }
+}
+
+void limas3 () {
+  char tau;
+  float alas = 0.0, tinggi = 0.0, luas = 0.0, tinggi2 = 0.0, volume = 0.0;
+  cout<<"Apakah sudah mengetahui luas alas (y/n)? "; cin>>tau;
+  if (tau == 'y' || tau == 'Y') {
+    cout<<"Masukkan luas alas (segitiga): "; cin>>luas;
+    cout<<"Masukkan tinggi limas: "; cin>>tinggi2;
+    if(luas>0 && tinggi2>0){
+    volume = (luas*tinggi2)/3.0;
+    cout<<"Volume Limas Segitiga: "<<volume<<endl;
+    }
+    else {
+      cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+    }
+  }
+  else if (tau == 'n' || tau == 'N'){
+    cout<<"Masukkan alas segitiga: "; cin>>alas;
+    cout<<"Masukkan tinggi segitiga: "; cin>>tinggi;
+    cout<<"Masukkan tinggi limas: "; cin>>tinggi2;
+    if (alas>0 && tinggi>0 && tinggi2>0) {
+      volume = ((alas*tinggi*0.5)*tinggi2)/3;
+      cout<<"Volume Limas Segitiga: "<<volume<<endl;
+    }
+    else {
+      cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+    }
+  }
+  else {
+    cout<<"Input yang dimasukkan tidak valid"<<endl;
+    return;
+  }
+}
+
+void limas4 () {
+  char tau;
+  int bangun;
+  float sisi = 0.0, panjang = 0.0, lebar = 0, luas = 0.0, tinggi = 0.0, volume = 0.0;
+  cout<<"Apakah sudah mengetahui luas alas (y/n)? "; cin>>tau;
+  if (tau == 'y' || tau == 'Y') {
+    cout<<"Masukkan luas alas: "; cin>>luas;
+    cout<<"Masukkan tinggi limas: "; cin>>tinggi;
+    if(luas>0 && tinggi>0){
+    volume = (luas*tinggi)/3.0;
+    cout<<"Volume Limas Segiempat: "<<volume<<endl;
+    }
+    else {
+      cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+    }
+  }
+  else if (tau == 'n' || tau == 'N'){
+    cout<<"Apakah alas persegi [1] atau persegi panjang [2]: ?"; cin>>bangun;
+    if (bangun == 1) {
+    cout<<"Masukkan panjang sisi persegi: "; cin>>sisi;
+    cout<<"Masukkan tinggi limas: "; cin>>tinggi;
+      if (sisi>0 && tinggi>0 ) {
+        volume = (sisi*sisi*tinggi)/3.0;
+        cout<<"Volume Limas Segiempat: "<<volume<<endl;
+      }
+      else {
+        cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+      }
+    }
+    else if (bangun ==2){
+      cout<<"Masukkan panjang persegi: "; cin>>panjang;
+      cout<<"Masukkan lebar persegi: "; cin>>lebar;
+      cout<<"Masukkan tinggi limas: "; cin>>tinggi;
+      if (panjang>0 && && lebar>0 && tinggi>0 ) {
+        volume = (panjang*lebar*tinggi)/3.0;
+        cout<<"Volume Limas Segiempat: "<<volume<<endl;
+      }
+      else {
+        cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+      }
+    }
+  else {
+    cout<<"Input yang dimasukkan tidak valid"<<endl;
+    return;
+  }
+}
+
 
 int main () {
   int pilih;
