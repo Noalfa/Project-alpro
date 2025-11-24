@@ -43,48 +43,6 @@ void datar () {
       cout<<"Pilihan tidak valid"<<endl;
   }  
 }
-void ruang () {
-  int pilih;
-  cout<<"Menghitung Luas Bangun Ruang "<<endl;
-  cout<<"1. Kubus" <<endl;
-  cout<<"2. Balok" <<endl;
-  cout<<"3. Tabung" <<endl;
-  cout<<"4. Bola" <<endl;
-  cout<<"5. Kerucut" <<endl;
-  cout<<"6. Limas Segitiga" <<endl;
-  cout<<"7. Limas Segiempat" <<endl;
-  cout<<"8. Prisma Segitiga" <<endl;
-  cout<<"Pilih Jenis Bangun Ruang"; cin>>pilih;
-    
-  switch (pilih) {
-    case 1:
-      kubus();
-      break;
-    case 2:
-      balok();
-      break;
-    case 3:
-      tabung();
-      break;
-    case 4: 
-      bola();
-      break;
-    case 5
-      kerucut();
-      break;
-    case 6:
-      limas3();
-      break;
-    case 7:
-      limas4();
-      break;
-    case 8:
-      prisma3();
-      break;
-    default:
-      cout<<"Pilihan tidak valid"<<endl;
-  }  
-}
 
 void persegi () {
   float sisi;
@@ -189,6 +147,74 @@ void trapesium () {
   if (alas1 >0 && alas2 >0 && tinggi >0){
     float luas = 0.5*(alas1+alas2)*tinggi;
     cout<<"Luas Trapesium = "<<luas<<endl;
+  }
+  else {
+    cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+  }
+}
+
+void ruang () {
+  int pilih;
+  cout<<"Menghitung Luas Bangun Ruang "<<endl;
+  cout<<"1. Kubus" <<endl;
+  cout<<"2. Balok" <<endl;
+  cout<<"3. Tabung" <<endl;
+  cout<<"4. Bola" <<endl;
+  cout<<"5. Kerucut" <<endl;
+  cout<<"6. Limas Segitiga" <<endl;
+  cout<<"7. Limas Segiempat" <<endl;
+  cout<<"8. Prisma Segitiga" <<endl;
+  cout<<"Pilih Jenis Bangun Ruang"; cin>>pilih;
+    
+  switch (pilih) {
+    case 1:
+      kubus();
+      break;
+    case 2:
+      balok();
+      break;
+    case 3:
+      tabung();
+      break;
+    case 4: 
+      bola();
+      break;
+    case 5
+      kerucut();
+      break;
+    case 6:
+      limas3();
+      break;
+    case 7:
+      limas4();
+      break;
+    case 8:
+      prisma3();
+      break;
+    default:
+      cout<<"Pilihan tidak valid"<<endl;
+  }  
+}
+
+void kubus () {
+ float sisi;
+ cout<<"Masukkan nilai angka sisi kubus: "; cin>>sisi;
+  if (sisi >0){
+    float volume = sisi^3;
+    cout<<"Volume Kubus = "<<volume<<endl;
+  }
+  else {
+    cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
+  }
+}
+
+void kubus () {
+ float panjang;
+ double
+ cout<<"Masukkan nilai angka sisi kubus: "; cin>>sisi;
+  if (sisi >0){
+    float volume = sisi^3;
+    cout<<"Volume Kubus = "<<volume<<endl;
   }
   else {
     cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
