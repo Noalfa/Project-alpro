@@ -198,7 +198,7 @@ void ruang () {
 
 void kubus () {
  float sisi;
- cout<<"Masukkan nilai angka sisi kubus: "; cin>>sisi;
+ cout<<"Masukkan nilai sisi kubus: "; cin>>sisi;
   if (sisi >0){
     float volume = sisi^3;
     cout<<"Volume Kubus = "<<volume<<endl;
@@ -208,13 +208,15 @@ void kubus () {
   }
 }
 
-void kubus () {
- float panjang;
- double
- cout<<"Masukkan nilai angka sisi kubus: "; cin>>sisi;
-  if (sisi >0){
-    float volume = sisi^3;
-    cout<<"Volume Kubus = "<<volume<<endl;
+void balok () {
+ float panjang, lebar;
+ double tinggi;
+ cout<<"Masukkan nilai panjang kubus: "; cin>>panjang;
+ cout<<"Masukkan nilai lebar kubus: "; cin>>lebar;
+  cout<<"Masukkan nilai tinggi kubus: "; cin>>tinggi;
+  if (panjang >0 && lebar >0 && tinggi >0){
+    float volume = panjang*lebar*tinggi;
+    cout<<"Volume Balok = "<<volume<<endl;
   }
   else {
     cout<<"nilai yang dimasukkan tidak boleh kurang dari 1"<<endl;
