@@ -1,3 +1,14 @@
+#include <iostream>
+using namespace std;
+
+string tim[13];
+void inputTim(){
+    cout << "Input Nama Tim:"<<endl;
+    for(int i = 0; i < 13; i++){
+        cout << "Masukkan nama tim ke-" << (i + 1) << ": ";getline(cin, timPeserta[i]);
+    }
+}
+
 int main() {
     int pilihan;
 
@@ -9,8 +20,7 @@ int main() {
         cout << "Pilih menu (1-3): ";cin >> pilihan;
       
         if (pilihan == 1) {
-            inputDataTim();
-            dataSudahDiinput = true;
+            inputTim();
         } else if (pilihan == 2) {
   
         } else if (pilihan == 3) {
