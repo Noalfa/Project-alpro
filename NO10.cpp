@@ -21,7 +21,7 @@ const char* Sifat(int id){
 }
 
 void Perpaduan(int id, int pilih){
-	int kiri, kanan;
+	int kiri, kanan, warna2, warna3, warna4;
 	switch (id) {
         case 1:
 			kiri = pilih - 1;
@@ -32,18 +32,38 @@ void Perpaduan(int id, int pilih){
 			cout << pilih <<","<< kanan << " atau " << kiri << "," << pilih;
             break;
         case 2:
-        
+			warna2 = pilih + 6;
+			if(warna2 > 12) warna2 -= 12;
+			cout << "Perpaduan Warna Complementary dengan warna nomor:" << endl;
+			cout << pilih << " dan " << warna2 << endl;
             break;
-
         case 3:
-
+			warna2 = pilih + 6;
+			if(warna2 > 12) warna2 -= 12;
+			kiri = warna2 - 1;
+			if(kiri == 0) kiri = 12;
+			kanan = warna2 + 1;
+			if(kanan == 13) kanan = 1;
+			cout << "Perpaduan Warna Split-Complementary dengan warna nomor:" << endl;
+			cout << pilih << ", " << kiri << " dan " << kanan << endl;
             break;
-
         case 4:
+			warna2 = pilih + 4;
+			if(warna2 > 12) warna2 -= 12;
+			warna3 = pilih + 8;
+			if(warna3 > 12) warna3 -= 12;
+			cout << "Perpaduan Warna Triadic-Complementary dengan warna nomor:" << endl;
+			cout << pilih << ", " << warna2 << " dan " << warna3 << endl;
             break;
-
         case 5: 
-
+			warna2 = pilih + 6;
+			if(warna2 > 12) warna2 -= 12;
+			warna3 = pilih + 3;
+			if(warna3 > 12) warna3 -= 12;
+			warna4 = pilih + 9;
+			if(warna4 > 12) warna4 -= 12;
+			cout << "Perpaduan Warna Tetradic (Rectangle) dengan warna nomor:" << endl;
+			cout << pilih << ", " << warna3 << ", " << warna2 << ", " << warna4 << endl;
             break;
     }
 }
