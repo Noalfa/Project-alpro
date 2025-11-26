@@ -20,12 +20,17 @@ const char* Sifat(int id){
 	}
 }
 
-void Perpaduan(int id){
+void Perpaduan(int id, int pilih){
+	int kiri, kanan;
 	switch (id) {
         case 1:
-
+			kiri = pilih - 1;
+			if(kiri == 0) kiri = 12;
+			kanan = pilih + 1;
+			if(kanan == 13) kanan = 1;
+			cout << "Perpaduan Warna Analogous dengan warna nomor:"<<endl;
+			cout << pilih <<","<< kanan << " atau " << kiri << "," << pilih;
             break;
-
         case 2:
         
             break;
@@ -69,10 +74,10 @@ int main(){
     cout << "4. Perpaduan Warna Triadic-Complementary"<<endl;
     cout << "5. Perpaduan Warna Tetradic (Rectangle)"<<endl;
     cout << "Pilihan : ";cin >> harmonis;
-    if (pilih > 5 || pilih < 1) {
+    if (harmonis > 5 || harmonis < 1) {
         cout << "Input tidak valid. Keluar. (Harus 1 sampai 5)";
         return 0;
     }
     
-    Perpaduan(harmonis);
+    Perpaduan(harmonis, pilih);
 }
