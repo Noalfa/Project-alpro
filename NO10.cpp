@@ -21,15 +21,19 @@ const char* Sifat(int id){
 }
 
 void Perpaduan(int id, int pilih){
-	int kiri, kanan, warna2, warna3, warna4;
+	int kiri, kanan, kiri2, kanan2, warna2, warna3, warna4;
 	switch (id) {
         case 1:
 			kiri = pilih - 1;
 			if(kiri == 0) kiri = 12;
+			kiri2 = pilih - 2;
+			if(kiri2 <= 0) kiri2 = 12 - pilih;
 			kanan = pilih + 1;
 			if(kanan == 13) kanan = 1;
+			kanan2 = pilih + 2;
+			if(kanan2 >= 13) kanan2 = pilih - kanan2;
 			cout << "Perpaduan Warna Analogous dengan warna nomor:"<<endl;
-			cout << pilih <<","<< kanan << " atau " << kiri << "," << pilih;
+			cout << kanan <<","<< kanan2 << " atau " << kiri2 << "," << kiri << " atau "<< kanan << "," << kiri;
             break;
         case 2:
 			warna2 = pilih + 6;
