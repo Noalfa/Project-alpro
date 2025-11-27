@@ -23,7 +23,7 @@ const char* Sifat(int id){
 void Perpaduan(int id, int pilih){
 	int kiri, kanan, kiri2, kanan2, warna2, warna3, warna4;
 	switch (id) {
-        case 1:
+        case 'a':
 			kiri = pilih - 1;
 			if(kiri == 0) kiri = 12;
 			kiri2 = pilih - 2;
@@ -35,13 +35,13 @@ void Perpaduan(int id, int pilih){
 			cout << "Perpaduan Warna Analogous dengan warna nomor:"<<endl;
 			cout << kanan <<","<< kanan2 << " atau " << kiri2 << "," << kiri << " atau "<< kanan << "," << kiri;
             break;
-        case 2:
+        case 'b':
 			warna2 = pilih + 6;
 			if(warna2 > 12) warna2 -= 12;
 			cout << "Perpaduan Warna Complementary dengan warna nomor:" << endl;
 			cout << pilih << " dan " << warna2 << endl;
             break;
-        case 3:
+        case 'c':
 			warna2 = pilih + 6;
 			if(warna2 > 12) warna2 -= 12;
 			kiri = warna2 - 1;
@@ -51,7 +51,7 @@ void Perpaduan(int id, int pilih){
 			cout << "Perpaduan Warna Split-Complementary dengan warna nomor:" << endl;
 			cout << pilih << ", " << kiri << " dan " << kanan << endl;
             break;
-        case 4:
+        case 'd':
 			warna2 = pilih + 4;
 			if(warna2 > 12) warna2 -= 12;
 			warna3 = pilih + 8;
@@ -59,7 +59,7 @@ void Perpaduan(int id, int pilih){
 			cout << "Perpaduan Warna Triadic-Complementary dengan warna nomor:" << endl;
 			cout << pilih << ", " << warna2 << " dan " << warna3 << endl;
             break;
-        case 5: 
+        case 'e': 
 			warna2 = pilih + 6;
 			if(warna2 > 12) warna2 -= 12;
 			warna3 = pilih + 3;
@@ -73,7 +73,8 @@ void Perpaduan(int id, int pilih){
 }
 
 int main(){
-	int pilih, harmonis;
+	int pilih; 
+	char harmonis;
 	cout << "Program Menentukan Notasi, Sifat Warna, dan Perpaduan Warna Harmonis"<<endl;
 	cout << "Warna-Warna : "<<endl;
 	cout << "1. Orange           2. Red-Orange    3. Red" << endl;
@@ -92,13 +93,13 @@ int main(){
     cout << "Sifat Warna  : " << Sifat(pilih) << endl;
 
     cout << "Pilih jenis perpaduan harmonis (masukkan angka):"<<endl;
-    cout << "1. Perpaduan Warna Analogous "<<endl;
-    cout << "2. Perpaduan Warna Complementary"<<endl;
-    cout << "3. Perpaduan Warna Split-Complementary"<<endl;
-    cout << "4. Perpaduan Warna Triadic-Complementary"<<endl;
-    cout << "5. Perpaduan Warna Tetradic (Rectangle)"<<endl;
+    cout << "a. Perpaduan Warna Analogous "<<endl;
+    cout << "b. Perpaduan Warna Complementary"<<endl;
+    cout << "c. Perpaduan Warna Split-Complementary"<<endl;
+    cout << "d. Perpaduan Warna Triadic-Complementary"<<endl;
+    cout << "e. Perpaduan Warna Tetradic (Rectangle)"<<endl;
     cout << "Pilihan : ";cin >> harmonis;
-    if (harmonis > 5 || harmonis < 1) {
+    if (harmonis > 'e' || harmonis < 'a') {
         cout << "Input tidak valid. Keluar. (Harus 1 sampai 5)";
         return 0;
     }
