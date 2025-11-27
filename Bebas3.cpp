@@ -66,6 +66,6 @@ int main () {
             cout << "Pilihan menu tidak tersedia." << endl;
         }
         cout << "Ingin mengulang? (y/n): "; cin >> ulang;
-    } while (ulang == 'y' || ulang == 'Y');
-    return 0;
+    } 
+    while (ulang == 'y' || ulang == 'Y');
 }
