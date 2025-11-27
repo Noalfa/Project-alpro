@@ -31,6 +31,7 @@ int main () {
     int pilih;
 
     do {
+		system ("cls");
         cout << "=== Kalkulator Sederhana ===" << endl;
         cout << "1. Penjumlahan" << endl;
         cout << "2. Pengurangan" << endl;
@@ -39,11 +40,14 @@ int main () {
         cout << "5. Keluar" << endl;
         cout << "Pilih menu: ";
         cin >> pilih;
-
-        cout << "Masukkan angka pertama: ";
-        cin >> x;
-        cout << "Masukkan angka kedua: ";
-        cin >> y;
+		
+		if (pilih==5){
+			cout<<"Keluar dari program..."<<endl;
+			exit(0);
+			}
+		
+        cout << "Masukkan angka pertama: "; cin >> x;
+        cout << "Masukkan angka kedua: "; cin >> y;
 
         switch (pilih) {
           case 1:
@@ -57,10 +61,6 @@ int main () {
             break;
           case 4:
             pembagian(x, y);
-            break;
-          case 5:
-            cout<<"Keluar dari program..."<<endl;
-            exit(0);
             break;
           default:
             cout << "Pilihan menu tidak tersedia." << endl;
