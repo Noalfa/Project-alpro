@@ -1,19 +1,23 @@
 #include <iostream>
 using namespace std;
 
-double kelvin(int &c) {
-    return c + 273.15;
+void kelvin(int &c) {
+    double k = c + 273.15;
+    cout<<"Kelvin = "<<k<<" K"<<endl;
 }
 
-double reamur(int &c) {
-    return (4.0 / 5.0) * c;
+void reamur(int &c) {
+    double r = (4.0 / 5.0) * c;
+    cout<<"Reamur = "<<r<<" R"<<endl;
 }
 
-double fahrenheit(int &c) {
-    return (9.0 / 5.0) * c + 32;
+void fahrenheit(int &c) {
+    double f = (9.0 / 5.0) * c + 32;
+    cout<<"Fahrenheit = "<<f<<" F"<<endl;
 }
 
 int main() {
+	while (true) {
     int pilih, c = 0;
     
     cout << "Masukkan suhu dalam celcius: "; cin >> c;
@@ -30,19 +34,21 @@ int main() {
 
     switch (pilih) {
         case 1:
-            cout << "Fahrenheit = " << fahrenheit(c) << " F" << endl;
+            fahrenheit(c);
             break;
 
         case 2:
-            cout << "Reamur = " << reamur(c) << " R" << endl;
+            reamur(c);
             break;
 
         case 3:
-            cout << "Kelvin = " << kelvin(c) << " K" << endl;
+            kelvin(c);
             break;
 
         default:
             cout << "Pilihan tidak valid." << endl;
             break;
-    }
+		}
+		cout<<endl;
+	}
 }
